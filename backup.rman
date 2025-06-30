@@ -1,0 +1,12 @@
+Run{
+Allocate channel 1 device type disk;
+Allocate channel 2 device type disk;
+Allocate channel 3 device type disk;
+Backup as compressed backupset database format '</path/to/backup/directory/db_full_%U';
+Backup as compressed backupset archivelog all format '</path/to/backup/directory/arc_full_%U
+Backup controlfile format '</path/to/backup/directory/ctl_full_%U';
+Backup spfile format '</path/to/backup/directory/sp_full_%U';
+Release channel 1;
+Release channel 2;
+Release channel 3;
+}
